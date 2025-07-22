@@ -38,6 +38,20 @@ export const Hero = styled.section`
     position: relative;
     z-index: 1;
   }
+
+    @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 5% 2rem 5%;
+    gap: 2.5rem;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 1.5rem 1rem;
+    gap: 1.2rem;
+  }
 `
 
 // Conteúdo de texto e botões dentro do Hero
