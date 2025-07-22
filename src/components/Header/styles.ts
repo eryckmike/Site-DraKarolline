@@ -8,6 +8,8 @@ export const Container = styled.header`
   padding: 0.5rem 5%;
   background: transparent;
   z-index: 10;
+
+
 `
 
 export const Nav = styled.nav`
@@ -45,5 +47,8 @@ export const ButtonGroup = styled.div`
       font-weight: bold;
       text-decoration: underline;
     }
+  }
+    @media (max-width: 900px) {
+    display: none;
   }
 `

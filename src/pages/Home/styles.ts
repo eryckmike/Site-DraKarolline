@@ -67,6 +67,10 @@ export const Content = styled.div`
     font-weight: bold;
     margin-bottom: 1rem;
     line-height: 1.1;
+    @media (max-width: 600px) {
+      font-size: 2.5rem;
+    }
+
   }
 
   p {
@@ -74,6 +78,8 @@ export const Content = styled.div`
     font-weight: 300;
     margin-bottom: 2rem;
     color: rgba(255, 255, 255, 0.8);
+    @media (max-width: 600px) {
+      font-size: 1rem;
   }
 `
 
