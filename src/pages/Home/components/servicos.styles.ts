@@ -38,22 +38,18 @@ export const ContainerServicos = styled.section`
   }
 `
 
+
 export const ServicoItem = styled.div`
   margin-bottom: 2rem;
 
-  // Ímpar: imagem à esquerda, texto à direita
   &:nth-child(odd) > div {
     flex-direction: row;
     text-align: left;
   }
-
-  // Par: imagem à direita, texto à esquerda
   &:nth-child(even) > div {
     flex-direction: row-reverse;
     text-align: right;
   }
-
-
 `
 
 export const ServicoContent = styled.div`
@@ -62,7 +58,10 @@ export const ServicoContent = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
 `
 
 export const ServicoImagem = styled.img`
@@ -71,6 +70,11 @@ export const ServicoImagem = styled.img`
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 600px) {
+    width: 120px;
+    height: 120px;
+  }
 `
 
 export const ServicoTexto = styled.div`
@@ -81,18 +85,22 @@ export const ServicoTexto = styled.div`
   h3 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
+    @media (max-width: 600px) {
+      font-size: 1.05rem;
+    }
   }
 
   p {
     font-size: 1rem;
     line-height: 1.5;
+    @media (max-width: 600px) {
+      font-size: 0.96rem;
+    }
   }
 
   ${ServicoItem}:nth-child(odd) & {
     text-align: left;
   }
-
-  // Texto à direita para itens pares
   ${ServicoItem}:nth-child(even) & {
     text-align: right;
   }

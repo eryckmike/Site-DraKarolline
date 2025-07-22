@@ -3,6 +3,12 @@ import styled from 'styled-components'
 export const Container = styled.section`
   background-color: #f9f6f6;
   padding: 6rem 10% 5rem;
+  @media (max-width: 900px) {
+    padding: 3rem 3% 2rem;
+  }
+  @media (max-width: 600px) {
+    padding: 2rem 1rem 1rem;
+  }
 `
 
 export const Titulo = styled.h2`
@@ -11,6 +17,10 @@ export const Titulo = styled.h2`
   color: #433F3F;
   text-align: center;
   font-family: 'Source Serif Pro', serif;
+  @media (max-width: 600px) {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
 `
 
 export const Content = styled.div`
@@ -18,6 +28,11 @@ export const Content = styled.div`
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: space-between;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const Mapa = styled.iframe`
@@ -27,6 +42,10 @@ export const Mapa = styled.iframe`
   width: 100%;
   max-width: 500px;
   border-radius: 1px;
+  @media (max-width: 600px) {
+    min-height: 180px;
+    max-width: 100%;
+  }
 `
 
 export const Info = styled.div`
@@ -35,6 +54,11 @@ export const Info = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+  @media (max-width: 900px) {
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+  }
 `
 
 export const Endereco = styled.a`
@@ -90,4 +114,6 @@ export const Botoes = styled.div`
     }
   }
 `
+
+
 

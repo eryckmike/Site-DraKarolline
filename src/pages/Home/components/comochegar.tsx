@@ -40,7 +40,7 @@ export function ComoChegar() {
                 Agendar avaliação
             </a>
             <a
-                href="https://online.maapp.com.br/Drakarollinebarros"
+                href="https://wa.me/5585981345529"
                 target="_blank"
                 rel="noopener noreferrer"
                 >

@@ -3,6 +3,12 @@ import styled from 'styled-components'
 export const Container = styled.section`
   background-color: #f9f6f6;
   padding: 6rem 10% 5rem;
+  @media (max-width: 900px) {
+    padding: 3rem 3% 2rem;
+  }
+  @media (max-width: 600px) {
+    padding: 2rem 1rem 1rem;
+  }
 `
 
 export const Content = styled.div`
@@ -12,6 +18,12 @@ export const Content = styled.div`
   font-family: 'Source Serif Pro', serif;
   flex-wrap: wrap;
   gap: 3rem;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 
   button, a {
     margin-top: 1.5rem;
@@ -30,7 +42,9 @@ export const Content = styled.div`
     text-align: center;
     outline: none;
     box-sizing: border-box;
-    height: 44px; /* deixa todos com a mesma altura */
+    height: 44px;
+    width: 100%;
+    max-width: 340px;
 
     &:hover {
       background: #433F3F;
@@ -39,7 +53,6 @@ export const Content = styled.div`
     }
   }
 `
-
 
 export const Texto = styled.div`
   flex: 1 1 500px;
@@ -50,6 +63,9 @@ export const Texto = styled.div`
     margin-bottom: 1.5rem;
     color: #433F3F;
     text-align: left;
+    @media (max-width: 600px) {
+      font-size: 1.4rem;
+    }
   }
 
   p {
@@ -58,9 +74,10 @@ export const Texto = styled.div`
     color: #444;
     margin-bottom: 1rem;
     text-align: left;
+    @media (max-width: 600px) {
+      font-size: 0.95rem;
+    }
   }
-
-
 `
 
 export const Foto = styled.img`
@@ -68,6 +85,10 @@ export const Foto = styled.img`
   max-width: 350px;
   object-fit: cover;
   border-radius:  0 75px 0;
+  @media (max-width: 600px) {
+    max-width: 220px;
+    border-radius: 30px 30px 0 30px;
+  }
 `
 
 export const ContainerFoto = styled.div`
@@ -75,5 +96,9 @@ export const ContainerFoto = styled.div`
   flex-direction: column;
   align-items: center;
   flex: 1 1 300px;
-  gap: 1.5rem; // espaçamento entre imagem e botão
+  gap: 1.5rem;
+
+  @media (max-width: 900px) {
+    margin-bottom: 2rem;
+  }
 `
