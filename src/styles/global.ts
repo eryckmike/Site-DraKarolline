@@ -15,11 +15,12 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
   scroll-behavior: smooth;
+  overflow-x: hidden !important;
 }
 
 
   body {
-    verflow-x: hidden;
+    overflow-x: hidden !important;
     background-color: #000; /* evita fundo branco por padrão */
     font-family: 'Source Serif Pro', serif;
   }

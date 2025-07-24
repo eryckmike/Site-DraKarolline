@@ -22,8 +22,8 @@ export const Hero = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1 5%;
   color: white;
+  padding: 5rem 5% 2rem 5%;
   z-index: 1;
 
   &::before {
@@ -42,12 +42,14 @@ export const Hero = styled.section`
     @media (max-width: 900px) {
     flex-direction: column;
     align-items: center;
-    padding: 4rem 5% 2rem 5%;
+    padding: 5rem 5% 2rem 5%;
     gap: 2.5rem;
   }
 
   @media (max-width: 600px) {
+  
     flex-direction: column;
+    width: 100%;
     align-items: center;
     padding: 2rem 1rem 1.5rem 1rem;
     gap: 1.2rem;
@@ -56,30 +58,39 @@ export const Hero = styled.section`
 
 // Conteúdo de texto e botões dentro do Hero
 export const Content = styled.div`
-  max-width: 700px;
+  max-width: 1000px;
   width: 100%;
   text-align: left;
   margin-left: auto;
-  margin-right: rem;
 
   h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
     line-height: 1.1;
     @media (max-width: 600px) {
-      font-size: 2.5rem;
+      font-size: 1.8rem;
+      padding: 0.5rem;
+      padding-left: 0rem;
+
+      padding-bottom: 0rem;
     }
 
   }
 
   p {
     font-size: 1.25rem;
-    font-weight: 300;
+    font-weight: 500;
     margin-bottom: 2rem;
     color: rgba(255, 255, 255, 0.8);
-    @media (max-width: 600px) {
-      font-size: 1rem;
+    @media (max-width: 900px) {
+      font-size: 0.8rem;
+      padding: 0.5rem;
+      padding-top: 0rem;
+      padding-left: 0rem;
+      padding-right: 5rem;
+      padding-bottom: 0rem;
+    }
   }
 `
 
