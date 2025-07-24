@@ -4,7 +4,9 @@ export const Container = styled.header`
   position: absolute;   /* fixo dentro do Hero */
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
   padding: 0.5rem 5%;
   background: transparent;
   z-index: 10;
@@ -48,7 +50,10 @@ export const ButtonGroup = styled.div`
       text-decoration: underline;
     }
   }
-    @media (max-width: 900px) {
-    display: none;
-  }
+    @media (max-width: 600px) {
+      display: none !important;
+      width: 0 !important;
+      min-width: 0 !important;
+}
+
 `

@@ -9,6 +9,14 @@ export const Container = styled.div`
   padding: 0;
   overflow-x: hidden;
   font-family: 'Source Serif Pro', serif;
+
+  @media (max-width: 600px) {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
 `
 
 // Hero (parte da imagem com overlay)
@@ -17,14 +25,23 @@ export const Hero = styled.section`
   background: url(${backgroundHero}) no-repeat center;
   background-size: cover;
   background-position: top center;
-  width: 100%;
+  width: 100vw ;
   min-height: 100vh;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   padding: 5rem 5% 2rem 5%;
   z-index: 1;
+  
+  
+  @media (max-width: 600px) {
+  background-size: cover;
+}
 
   &::before {
     content: '';
@@ -46,24 +63,38 @@ export const Hero = styled.section`
     gap: 2.5rem;
   }
 
-  @media (max-width: 600px) {
-  
+    @media (max-width: 600px) {
     flex-direction: column;
     width: 100%;
-    align-items: center;
+    min-width: 0;
+    left: 0;
+    right: 0;
+    margin-left: 0;
+    margin-right: 0;
     padding: 2rem 1rem 1.5rem 1rem;
     gap: 1.2rem;
   }
+
 `
 
 // Conteúdo de texto e botões dentro do Hero
 export const Content = styled.div`
-  max-width: 1000px;
   width: 100%;
   text-align: left;
   margin-left: auto;
 
-  h1 {
+
+  @media (max-width: 800px) {
+  div {
+    width: 360px;
+    max-width: 100%;
+    padding-top: 2rem;
+    }
+}
+
+  
+
+    h1 {
     font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -72,7 +103,7 @@ export const Content = styled.div`
       font-size: 1.8rem;
       padding: 0.5rem;
       padding-left: 0rem;
-
+      padding-top: 7rem;
       padding-bottom: 0rem;
     }
 
@@ -80,36 +111,42 @@ export const Content = styled.div`
 
   p {
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 200;
     margin-bottom: 2rem;
     color: rgba(255, 255, 255, 0.8);
     @media (max-width: 900px) {
-      font-size: 0.8rem;
+      font-size: 1.1rem;
       padding: 0.5rem;
       padding-top: 0rem;
-      padding-left: 0rem;
-      padding-right: 5rem;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
       padding-bottom: 0rem;
     }
   }
 `
-
 export const ButtonGroup = styled.div`
   display: flex;
   gap: 1rem;
+  width: 100%;
 
-  /* Aplica a ambos, button e a */
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: stretch;
+
+    .filled, .outlined {
+      width: 100%;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+  }
+
   .filled, .outlined {
     padding: 0.75rem 1.5rem;
-    min-width: 134px;          /* <-- garante que TODOS têm o mesmo tamanho mínimo */
-    text-align: center;        /* centraliza o texto */
-    text-decoration: none;     /* <-- tira o underline do <a> */
+    min-width: 134px;
+    text-align: center;
     border-radius: 13px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-
-    display: inline-block;     /* garante que o <a> fique igual ao botão */
+    display: inline-block;
   }
 
   .filled {
@@ -140,19 +177,22 @@ export const ButtonGroup = styled.div`
 
 // Indicador de rolagem com seta e texto
 export const ScrollIndicator = styled.div`
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
+  position: fixed;
+  left: 50vw;
+  bottom: 5rem;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 999; /* maior para ficar na frente */
   color: white;
-  z-index: 2;
   font-weight: 600;
   cursor: pointer;
   user-select: none;
 
+  @media (max-width: 600px) {
+    bottom: 2rem;
+  }
   .arrow-wrapper {
     animation: bounce 2s infinite;
     display: flex;

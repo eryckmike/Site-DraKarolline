@@ -11,7 +11,9 @@ export function Home() {
     <Container>
       <Header />
       <Hero>
+        
         <Content>
+          <div>
           <h1>
             Sua pele merece o melhor: <br />
             tratamentos avançados para <br />
@@ -33,8 +35,9 @@ export function Home() {
   </a>
   <a href="#como-chegar" className="outlined">Como chegar</a>
 </ButtonGroup>
-
+        </div>
         </Content>
+        
         <ScrollIndicator>
           <div className="arrow" />
           <span>Entenda mais</span>
