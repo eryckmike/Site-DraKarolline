@@ -4,7 +4,8 @@ export const Container = styled.header`
   position: absolute;   /* fixo dentro do Hero */
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
+  box-sizing: border-box;  
   max-width: 100vw;
   overflow-x: hidden;
   padding: 0.5rem 5%;

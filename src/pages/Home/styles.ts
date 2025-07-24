@@ -64,16 +64,17 @@ export const Hero = styled.section`
   }
 
     @media (max-width: 600px) {
-    flex-direction: column;
-    width: 100%;
-    min-width: 0;
-    left: 0;
-    right: 0;
-    margin-left: 0;
-    margin-right: 0;
-    padding: 2rem 1rem 1.5rem 1rem;
-    gap: 1.2rem;
-  }
+  width: 100vw !important;
+  min-width: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 2rem 0.5rem 1.5rem 0.5rem !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+}
+
 
 `
 
@@ -86,9 +87,15 @@ export const Content = styled.div`
 
   @media (max-width: 800px) {
   div {
-    width: 360px;
+    width: 100%;
     max-width: 100%;
     padding-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    margin: 1 auto;
+    align-items: center;
+    align-self: center;
     }
 }
 

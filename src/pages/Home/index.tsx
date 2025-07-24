@@ -24,6 +24,7 @@ export function Home() {
   }, []);
 
   return (
+    <>
     <Container>
       <Header />
       <Hero ref={heroRef}>
@@ -64,5 +65,6 @@ export function Home() {
       <ComoChegar />
       <Footer />
     </Container>
+    </>
   );
 }
