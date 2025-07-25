@@ -29,7 +29,7 @@ export const Logo = styled.img`
 
 export const ButtonGroup = styled.div`
   position: absolute;
-  left: 46%;
+  left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 2rem;
