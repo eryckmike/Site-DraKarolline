@@ -26,7 +26,7 @@ export function ComoChegar() {
             target="_blank"
             rel="noopener noreferrer"
             >
-                R. João Forte, 531, Padre Romualdo, Caucaia - Ceará, 61601-350, Brazil
+                R. João Forte, 591, Padre Romualdo, Caucaia - Ceará, 61601-350, Brazil
             
             </Endereco>
 
